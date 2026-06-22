@@ -1,0 +1,71 @@
+.select-car-content h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.select-car-sub {
+  color: #8b93a7;
+  margin-bottom: 28px;
+}
+
+.select-car-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #12141c;
+  border: 1px solid #1e2230;
+  border-radius: 8px;
+  padding: 12px 16px;
+  max-width: 500px;
+  margin-bottom: 16px;
+}
+
+.select-car-search input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+}
+
+.fuel-filter-label {
+  color: #5b9cff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.make-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  max-width: 800px;
+}
+
+.make-card {
+  background: #12141c;
+  border: 1px solid #1e2230;
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.make-card:hover {
+  border-color: #5b9cff;
+}
+
+.make-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.make-name {
+  font-size: 14px;
+  font-weight: 600;
+}
