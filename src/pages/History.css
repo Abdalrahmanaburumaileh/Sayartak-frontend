@@ -1,0 +1,163 @@
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.history-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.history-header p {
+  color: #8b93a7;
+  font-size: 14px;
+}
+
+.add-record-btn {
+  background: #5b9cff;
+  border: none;
+  color: #0a0b10;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.history-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: #12141c;
+  border: 1px solid #1e2230;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.stat-card small {
+  color: #8b93a7;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.stat-card.highlight strong {
+  color: #f5a623;
+}
+
+.add-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: #12141c;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.add-form input,
+.add-form select {
+  padding: 8px 12px;
+  background: #0a0b10;
+  border: 1px solid #1e2230;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.add-form button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+.add-form button[type="submit"] {
+  background: #5b9cff;
+  color: #0a0b10;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #12141c;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.history-table th {
+  text-align: left;
+  padding: 14px 16px;
+  color: #8b93a7;
+  font-size: 12px;
+  border-bottom: 1px solid #1e2230;
+}
+
+.history-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #1e2230;
+  font-size: 14px;
+}
+
+.type-badge {
+  background: #1a3050;
+  color: #5b9cff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.empty-row {
+  text-align: center;
+  color: #8b93a7;
+  padding: 40px !important;
+}
+
+@media (max-width: 768px) {
+  .history-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .add-record-btn {
+    width: 100%;
+  }
+
+  .history-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .history-table {
+    min-width: 520px;
+  }
+
+  .add-form {
+    flex-direction: column;
+  }
+
+  .add-form input,
+  .add-form select,
+  .add-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-stats {
+    grid-template-columns: 1fr;
+  }
+}
