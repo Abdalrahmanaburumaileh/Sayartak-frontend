@@ -1,0 +1,27 @@
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.brand-logo strong {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+}
+
+.brand-logo small {
+  display: block;
+  color: #8b93a7;
+  font-size: 11px;
+}
+
+.brand-logo.centered {
+  flex-direction: column;
+  text-align: center;
+}
+
+.brand-logo.centered > div {
+  text-align: center;
+}
