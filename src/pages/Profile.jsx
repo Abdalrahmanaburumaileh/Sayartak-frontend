@@ -22,7 +22,7 @@ function Profile() {
       return;
     }
 
-    fetch(`http://localhost:3000/api/profile/${storedUser.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/profile/${storedUser.id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.message && !data.user) {
@@ -47,7 +47,7 @@ function Profile() {
 
   const handleSave = async () => {
     const res = await fetch(
-      `http://localhost:3000/api/profile/${storedUser.id}`,
+      `${import.meta.env.VITE_API_URL}/profile/${storedUser.id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -68,7 +68,7 @@ function Profile() {
   };
 
   const handleSelectVehicle = async (vehicleId) => {
-    await fetch(`http://localhost:3000/api/vehicles/${vehicleId}/activate`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/vehicles/${vehicleId}/activate`, {
       method: "PUT",
     });
     localStorage.setItem("activeVehicleId", vehicleId);

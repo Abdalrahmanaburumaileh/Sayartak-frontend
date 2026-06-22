@@ -11,7 +11,7 @@ function SelectCar() {
   const fuelType = localStorage.getItem("selectedFuelType") || "gas";
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/cars?fuel=${fuelType}`)
+    fetch(`${import.meta.env.VITE_API_URL}/cars?fuel=${fuelType}`)
       .then((res) => res.json())
       .then((data) => setMakes(data.makes));
   }, [fuelType]);

@@ -24,7 +24,7 @@ function Dashboard() {
   const [weather, setWeather] = useState(null);
 
   const loadVehicle = useCallback(() => {
-    fetch(`http://localhost:3000/api/vehicles?userId=${user.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/vehicles?userId=${user.id}`)
       .then((res) => res.json())
       .then((data) => {
         const activeId = localStorage.getItem("activeVehicleId");
@@ -49,7 +49,7 @@ function Dashboard() {
     }
     loadVehicle();
 
-    fetch("http://localhost:3000/api/weather")
+    fetch(import.meta.env.VITE_API_URL + "/weather")
       .then((res) => res.json())
       .then((data) => setWeather(data))
       .catch(() => setWeather(null));
@@ -57,7 +57,7 @@ function Dashboard() {
 
   const addMaintenanceRecord = async (type, description) => {
     const today = new Date().toISOString().split("T")[0];
-    const res = await fetch("http://localhost:3000/api/maintenance", {
+    const res = await fetch(import.meta.env.VITE_API_URL + "/maintenance", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

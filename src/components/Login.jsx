@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:3000/api/login", {
+    const res = await fetch(import.meta.env.VITE_API_URL + "/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -25,7 +25,7 @@ const Login = () => {
       }
 
       const vehiclesRes = await fetch(
-        `http://localhost:3000/api/vehicles?userId=${data.user.id}`
+        `${import.meta.env.VITE_API_URL}/vehicles?userId=${data.user.id}`
       );
       const vehiclesData = await vehiclesRes.json();
       if (vehiclesData.vehicles?.length > 0) {

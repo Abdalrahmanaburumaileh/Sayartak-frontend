@@ -18,7 +18,7 @@ function History() {
   });
 
   const loadData = () => {
-    fetch(`http://localhost:3000/api/vehicles?userId=${user.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/vehicles?userId=${user.id}`)
       .then((res) => res.json())
       .then((data) => {
         const activeId = localStorage.getItem("activeVehicleId");
@@ -28,7 +28,7 @@ function History() {
           data.vehicles[0];
         setVehicle(active);
         if (active) {
-          fetch(`http://localhost:3000/api/maintenance?vehicleId=${active.id}`)
+          fetch(`${import.meta.env.VITE_API_URL}/maintenance?vehicleId=${active.id}`)
             .then((res) => res.json())
             .then((d) => setRecords(d.records));
         }
@@ -45,7 +45,7 @@ function History() {
 
   const handleAdd = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:3000/api/maintenance", {
+    const res = await fetch(import.meta.env.VITE_API_URL + "/maintenance", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -65,7 +65,7 @@ function History() {
 
   const handleDelete = async (id) => {
     if (!confirm("Delete this record?")) return;
-    await fetch(`http://localhost:3000/api/maintenance/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/maintenance/${id}`, {
       method: "DELETE",
     });
     loadData();

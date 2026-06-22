@@ -26,7 +26,7 @@ function VehicleSetup() {
 
   useEffect(() => {
     if (activeVehicleId && !localStorage.getItem("selectedMake")) {
-      fetch(`http://localhost:3000/api/vehicles/${activeVehicleId}`)
+      fetch(`${import.meta.env.VITE_API_URL}/vehicles/${activeVehicleId}`)
         .then((res) => res.json())
         .then((data) => {
           const v = data.vehicle;
@@ -61,7 +61,7 @@ function VehicleSetup() {
 
     if (editMode) {
       const res = await fetch(
-        `http://localhost:3000/api/vehicles/${activeVehicleId}`,
+        `${import.meta.env.VITE_API_URL}/vehicles/${activeVehicleId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -72,7 +72,7 @@ function VehicleSetup() {
       return;
     }
 
-    const res = await fetch("http://localhost:3000/api/vehicles", {
+    const res = await fetch(import.meta.env.VITE_API_URL + "/vehicles", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

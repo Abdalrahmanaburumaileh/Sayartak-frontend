@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_BASE = "http://localhost:3000/api";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 function CarImage({ make, model, imageUrl, alt = "Car", className = "" }) {
   const [src, setSrc] = useState(imageUrl || "/car-bg.avif");
