@@ -1,0 +1,232 @@
+/* Shared sidebar (used on all driver pages) */
+.sidebar {
+  width: 220px;
+  background: #0d0e14;
+  border-right: 1px solid #1e2230;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.sidebar-brand small {
+  display: block;
+  color: #8b93a7;
+  font-size: 11px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.sidebar-nav button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: #8b93a7;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.sidebar-nav button:hover,
+.sidebar-nav button.active {
+  background: #5b9cff;
+  color: #0a0b10;
+}
+
+.sidebar-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px;
+  background: #5b9cff;
+  border: none;
+  border-radius: 8px;
+  color: #0a0b10;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.sidebar-footer {
+  margin-top: 24px;
+  color: #8b93a7;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+/* Shared page shells */
+html {
+  overflow-x: hidden;
+}
+
+.dashboard-page,
+.select-car-page,
+.profile-page,
+.history-page,
+.setup-page {
+  display: flex;
+  min-height: 100vh;
+  background: #0a0b10;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-content,
+.select-car-content,
+.profile-content,
+.history-content,
+.setup-content {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 40px;
+}
+
+/* ── Tablet & mobile (768px and below) ── */
+@media (max-width: 768px) {
+  .dashboard-page,
+  .select-car-page,
+  .profile-page,
+  .history-page,
+  .setup-page,
+  .admin-page {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .admin-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #1e2230;
+    padding: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sidebar-brand,
+  .admin-brand {
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .sidebar-nav,
+  .admin-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    flex: 1 1 100%;
+    order: 3;
+  }
+
+  .sidebar-nav button,
+  .admin-nav-btn {
+    flex: 1;
+    min-width: 90px;
+    justify-content: center;
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .sidebar-add-btn {
+    margin-top: 0;
+    flex: 1 1 auto;
+    min-width: 120px;
+    order: 2;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .admin-logout {
+    margin-top: 0;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .dashboard-content,
+  .select-car-content,
+  .profile-content,
+  .history-content,
+  .setup-content,
+  .admin-main {
+    padding: 16px;
+  }
+
+  .select-car-content h1,
+  .history-header h1,
+  .admin-header h1 {
+    font-size: 24px;
+  }
+
+  .dash-hero-info h1,
+  .setup-hero-overlay h1 {
+    font-size: 22px;
+  }
+
+  .select-car-search {
+    max-width: 100%;
+  }
+
+  .make-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    max-width: 100%;
+  }
+}
+
+/* ── Small phones (480px and below) ── */
+@media (max-width: 480px) {
+  .dashboard-content,
+  .select-car-content,
+  .profile-content,
+  .history-content,
+  .setup-content,
+  .admin-main {
+    padding: 12px;
+  }
+
+  .sidebar-nav button {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .make-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .make-card {
+    padding: 16px 10px;
+  }
+
+  .make-logo {
+    width: 44px;
+    height: 44px;
+  }
+}
