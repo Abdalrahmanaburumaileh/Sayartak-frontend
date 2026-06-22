@@ -1,0 +1,135 @@
+.model-page .selected-brand {
+  color: #5b9cff;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin-bottom: 32px;
+}
+
+.model-card {
+  background: #12141c;
+  border: 1px solid #1e2230;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.model-card:hover {
+  border-color: #5b9cff;
+}
+
+.model-card.selected {
+  border-color: #5b9cff;
+  box-shadow: 0 0 16px rgba(91, 156, 255, 0.2);
+}
+
+.model-tag {
+  background: #1a3050;
+  color: #5b9cff;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.model-check {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #5b9cff;
+  color: #0a0b10;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.model-image {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin: 12px 0 8px;
+}
+
+.model-card h3 {
+  margin: 16px 0 4px;
+  font-size: 20px;
+}
+
+.model-card p {
+  color: #8b93a7;
+  font-size: 13px;
+}
+
+.model-actions {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+}
+
+.back-btn,
+.continue-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid #2a3040;
+  color: #8b93a7;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.continue-btn {
+  background: #5b9cff;
+  border: none;
+  color: #0a0b10;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.continue-btn:hover {
+  background: #7eb1ff;
+}
+
+@media (max-width: 768px) {
+  .model-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    max-width: 100%;
+  }
+
+  .model-actions {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .back-btn,
+  .continue-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .model-grid {
+    grid-template-columns: 1fr;
+  }
+}
