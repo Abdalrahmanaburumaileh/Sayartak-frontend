@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111118;
+  font-family: "Segoe UI", sans-serif;
+  color: #e0e0f0;
+}
+
+/* ── Navbar ── */
+.reg-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid #1e1e2e;
+}
+
+.reg-nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #6a6a88;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #e0e0f0;
+}
+
+.nav-link.active {
+  color: #e0e0f0;
+  border-bottom: 2px solid #8b9ff4;
+  padding-bottom: 2px;
+}
+
+/* ── Main layout ── */
+.reg-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 60px 60px;
+  min-height: calc(100vh - 120px);
+}
+
+/* ── Left column ── */
+.reg-left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.reg-headline {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.reg-highlight {
+  color: #8b9ff4;
+}
+
+.reg-subtext {
+  font-size: 15px;
+  color: #7a7a98;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 400px;
+}
+
+.launch-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: #1a1a28;
+  border: 1px solid #2a2a3e;
+  border-radius: 10px;
+  padding: 20px 24px;
+  max-width: 380px;
+}
+
+.launch-icon {
+  background-color: #5a6aff;
+  color: white;
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.launch-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #6a6a88;
+  margin-bottom: 4px;
+}
+
+.launch-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0e0f0;
+}
+
+/* ── Right form card ── */
+.reg-card {
+  background-color: #1a1a26;
+  border: 1px solid #2a2a3e;
+  border-radius: 12px;
+  padding: 38px 40px;
+  width: 100%;
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
+.reg-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.reg-card-sub {
+  font-size: 13px;
+  color: #6a6a88;
+  margin-bottom: 28px;
+}
+
+/* ── Form fields ── */
+.reg-form-group {
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.reg-form-group label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #6a6a88;
+  margin-bottom: 8px;
+}
+
+.reg-form-group input {
+  width: 100%;
+  background-color: #111118;
+  border: 1px solid #2a2a3e;
+  border-radius: 6px;
+  padding: 11px 14px;
+  color: #d0d0e8;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.reg-form-group input::placeholder {
+  color: #3a3a58;
+}
+
+.reg-form-group input:focus {
+  border-color: #6b7ff0;
+}
+
+/* side-by-side password row */
+.reg-row {
+  display: flex;
+  gap: 14px;
+}
+
+/* ── Create Account button ── */
+.create-btn {
+  width: 100%;
+  background-color: #8b9ff4;
+  color: #12121e;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s;
+  margin-bottom: 18px;
+}
+
+.create-btn:hover {
+  background-color: #7a8fe3;
+}
+
+/* ── Already registered ── */
+.already-registered {
+  text-align: center;
+  font-size: 13px;
+  color: #5a5a78;
+}
+
+.login-here {
+  text-decoration: none;
+  color: #e0e0f0;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+}
+
+.login-here:hover {
+  color: #8b9ff4;
+}
+
+/* ── Footer ── */
+.reg-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 18px 60px;
+  border-top: 1px solid #1e1e2e;
+}
+
+.footer-left {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-stat-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #4a4a68;
+}
+
+.footer-bar {
+  width: 80px;
+  height: 3px;
+  background-color: #2a2a3e;
+  border-radius: 2px;
+}
+
+.footer-bar-fill {
+  height: 100%;
+  background-color: #6b7ff0;
+  border-radius: 2px;
+}
+
+.footer-copy {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #3a3a58;
+}
+
+@media (max-width: 768px) {
+  .reg-nav {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .reg-nav-links {
+    gap: 16px;
+  }
+
+  .reg-main {
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 32px;
+    min-height: auto;
+  }
+
+  .reg-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .reg-headline {
+    font-size: 28px;
+  }
+
+  .reg-subtext {
+    max-width: 100%;
+  }
+
+  .launch-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .reg-card {
+    max-width: 100%;
+    padding: 28px 20px;
+  }
+
+  .reg-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .reg-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .reg-headline {
+    font-size: 24px;
+  }
+
+  .reg-form-group input {
+    font-size: 16px;
+  }
+}
