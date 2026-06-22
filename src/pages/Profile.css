@@ -1,0 +1,293 @@
+.profile-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.profile-user-card,
+.profile-stats-card,
+.profile-details-card,
+.profile-prefs-card {
+  background: #12141c;
+  border: 1px solid #1e2230;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.profile-user-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  background: #1a1d28;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.profile-user-card h1 {
+  font-size: 22px;
+}
+
+.profile-user-card p {
+  color: #8b93a7;
+  font-size: 14px;
+}
+
+.profile-badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.badge {
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.badge.blue {
+  background: #5b9cff;
+  color: #0a0b10;
+}
+
+.badge.gray {
+  background: #1e2230;
+  color: #8b93a7;
+}
+
+.profile-stats-card small {
+  color: #8b93a7;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.profile-stats-card strong {
+  display: block;
+  font-size: 48px;
+  margin: 8px 0;
+}
+
+.profile-stats-card p {
+  color: #8b93a7;
+  font-size: 13px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card-header h3,
+.profile-prefs-card h3,
+.profile-vehicles h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-header button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #5b9cff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.field-box {
+  background: #0a0b10;
+  border: 1px solid #1e2230;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.field-box small {
+  color: #8b93a7;
+  font-size: 11px;
+}
+
+.profile-form label {
+  display: block;
+  color: #8b93a7;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 10px;
+  background: #0a0b10;
+  border: 1px solid #1e2230;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.save-profile-btn {
+  background: #5b9cff;
+  border: none;
+  color: #0a0b10;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.profile-prefs-card p {
+  color: #8b93a7;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  background: #12141c;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.profile-vehicles h3 {
+  margin-bottom: 16px;
+}
+
+.vehicle-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.vehicle-card {
+  width: 200px;
+  background: #12141c;
+  border: 1px solid #1e2230;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.vehicle-card:hover {
+  border-color: #5b9cff;
+}
+
+.vehicle-card.active {
+  border-color: #5b9cff;
+}
+
+.vehicle-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.vehicle-card p {
+  padding: 12px;
+  font-size: 13px;
+}
+
+.active-tag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #5b9cff;
+  color: #0a0b10;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.add-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  border-style: dashed;
+}
+
+.add-card span {
+  font-size: 32px;
+  color: #8b93a7;
+}
+
+.add-card p {
+  color: #8b93a7;
+}
+
+.profile-loading,
+.profile-error {
+  color: #fff;
+  padding: 40px;
+}
+
+.profile-error {
+  color: #e74c3c;
+}
+
+.profile-error-hint {
+  color: #8b93a7;
+  padding: 0 40px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .profile-top,
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-user-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-badges {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .vehicle-card {
+    width: calc(50% - 8px);
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vehicle-card {
+    width: 100%;
+  }
+
+  .profile-stats-card strong {
+    font-size: 36px;
+  }
+}
